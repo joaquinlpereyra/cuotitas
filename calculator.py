@@ -5,9 +5,10 @@ def _rounding(something):
     something = Decimal(something)
     return something.quantize(cent, rounding=ROUND_DOWN)
 
-def calculator(price, months, expected_inflation = 2):
+def calculator(price, months, expected_inflation = 2, interest_rate = 0):
     expected_inflation = _rounding((100 - expected_inflation) / 100)
-    price = _rounding(price)
+    interest_rate = _rounding((100 + interest_rate) / 100)
+    price = _rounding(price) * interest_rate
     official_price = price / months
     last_price_paid = official_price
     real_prices = []

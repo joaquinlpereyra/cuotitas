@@ -6,9 +6,14 @@
 </head>
 <body>
     <form action="/calc" method="get">
-      How much does each payment cost?: <input type="text" name="payment_price"><br>
-      How many months are you gonna pay?: <input type="text" name="payment_months"><br>
+      ¿Cual es el precio de lista?: <input type="text" name="payment_price"><br>
+      ¿Cuantas cuotas son?: <input type="text" name="payment_months"><br>
+      ¿Cual es el interés de la cuota? <input type="text" name='interest_rate' value='0'><br>
+      ¿Qué inflación mensual esperás mientras pagues las cuotas? Si dejás vacío, se asume 2% <input type="text" name='expected_inflation' value='2'><br>
       <input type="submit" value="Submit">
     </form>
 
+    <p>Se espera que todos los valores sean completados con números </p>
+    <p>Usar puntos para los decimales. No separar los miles. </p>
+    <p>Los porcentajes son solo numéricos, y deben estar entre 0 y 100</p>
 </body>
