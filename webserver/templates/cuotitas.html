@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Cuotitas</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h2>En total, te va a terminar saliendo: <b>${{total_price}}</b></h2>
+			<p> El detalle: </p>
+			<div class="row">
+				<div class="col-sm-4">
+					<table class="table table-condensed">
+						<thead>
+							<tr>
+								<th>Cuota numero</th>
+								<th>Costo</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for price in prices %}
+							<tr>
+								<td>{{ loop.index }}</td>
+								<td>${{price}}</td>
+							</tr>
+							{%endfor%}						
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

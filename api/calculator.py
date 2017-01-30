@@ -14,5 +14,5 @@ def calculator(price, months, expected_inflation = 2, interest_rate = 0):
     real_prices = []
     for n in range(1, months+1):
         last_price_paid = _rounding(last_price_paid / expected_inflation)
-        real_prices.append(last_price_paid)
+        real_prices.append(round(last_price_paid,2))
     return real_prices

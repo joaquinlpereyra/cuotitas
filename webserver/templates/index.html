@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cuotitas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Cuotitas</h1>
+      <p>la mejor manera de saber cuanto vas a pagar</p>
+    </div>
+    <div class="container">
+      <form action="/calc" method="get">
+        <div class="row">
+          <div class="form-group">
+            <label class="control-label col-sm-4">¿Cual es el precio de lista?:</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="Costo del producto" name="payment_price">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="form-group">
+            <label class="control-label col-sm-4">¿Cuantas cuotas son?</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="Cantidad de cuotas" name="payment_months">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row"> 
+        <div class="form-group">
+          <label class="control-label col-sm-4">¿Cual es el interés de la cuota?</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" placeholder="En caso de no completar, se asume 0%" value=0 name="interest_rate">
+          </div>
+        </div>
+        </div>
+        <br>
+        <div class="row"> 
+        <div class="form-group">
+          <label class="control-label col-sm-4">¿Qué inflación mensual esperás mientras pagues las cuotas?</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" placeholder="En caso de no completar, se asume 2%" value=2 name="expected_inflation">
+          </div>
+        </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="form-group">
+            <div style="text-align:center">
+              <div class="col-sm-4 col-sm-offset-4">
+                <button type="submit" class="btn btn-primary" style="display: block; width: 100%;">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <br>
+    </div>
+    <div class="container">
+      <hr>
+      <div class="row">
+        <p style="color: Silver;">
+          <small><i>
+          Se espera que todos los valores sean completados con números. | Usar puntos para los decimales. No separar los miles. | Los porcentajes son solo numéricos y deben estar entre 0 y 100.
+          </i></small>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
